@@ -1,0 +1,45 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+<br />
+<br />
+<br />
+<br />
+
+<h1 align="center">FORMULARIO - EDITAR PERFIL</h1>
+<h2 align="center">USUARIO: {{usuario}}</h2>
+<br />
+<br />
+
+<div align="center">
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+      {{miFormulario.as_table}}
+    </table>
+    <br />
+
+    <input type="submit" , value="Enviar" />
+  </form>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+{% endblock %}

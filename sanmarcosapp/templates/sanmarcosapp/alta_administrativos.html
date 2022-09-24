@@ -1,0 +1,42 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<form align="center" action="alta_administrativo" method="POST">
+  {% csrf_token %}
+  <p>Ingresar un administrativo:</p>
+  <br />
+  <p>Nombre:</p>
+  <input type="text" name="nombre" />
+
+  <br />
+  <br />
+  <p>Cargo:</p>
+  <input type="text" name="cargo" />
+
+  <br />
+  <br />
+  <input class="btn btn-outline-dark mt-5" type="submit" value="Enviar" />
+  <a class="btn btn-outline-dark mt-5" href="/administrativos.html">Regresar Menú Principal</a>
+</form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}

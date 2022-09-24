@@ -1,0 +1,42 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<form align="center" action="alta_facultad" method="POST">
+  {% csrf_token %}
+  <p>Ingresar una facultad:</p>
+  <br />
+  <p>Nombre:</p>
+  <input type="text" name="nombre" />
+
+  <br />
+  <br />
+  <p>Escuela:</p>
+  <input type="text" name="escuelas" />
+
+  <br />
+  <br />
+  <input class="btn btn-outline-dark mt-5" type="submit" value="Enviar" />
+  <a class="btn btn-outline-dark mt-5" href="/facultades.html">Regresar Menú Principal</a>
+</form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}

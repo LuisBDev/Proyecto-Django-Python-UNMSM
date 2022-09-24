@@ -1,0 +1,39 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<div align="center">
+  {% for administrativo in administrativos %}
+
+  <p>Nombre : {{ administrativo.nombre }}</p>
+  <p>Cargo : {{ administrativo.cargo }}</p>
+
+  {% endfor %}
+
+  <a class="btn btn-outline-secondary" href="administrativos.html">Regresar atras</a>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}

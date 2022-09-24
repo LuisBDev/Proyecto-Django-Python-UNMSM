@@ -1,0 +1,309 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>UNMSM - Blog</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/logounmsm.png' %}" rel="icon" />
+    <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet" />
+
+    <!-- Vendor CSS Files -->
+
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Presento - v3.7.0
+  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+          <a href="/index.html">UNMSM<span>.</span></a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="/index.html">Home</a></li>
+            <li><a href="about.html">Historia</a></li>
+            <li><a class="nav-link scrollto" href="/administrativos.html">Administrativos</a></li>
+            <li><a class="nav-link scrollto" href="/facultades.html">Facultades</a></li>
+            <li><a class="nav-link scrollto" href="/directorios.html">Directorios</a></li>
+            <li><a class="nav-link scrollto" href="/oficinas.html">Oficinas</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        {% if user.is_authenticated %}
+        <a href="logout.html" class="get-started-btn scrollto">Log out</a>
+        <a href="/editarperfil.html" class="get-started-btn scrollto">Editar perfil</a>
+        {% else %}
+        <a href="login.html" class="get-started-btn scrollto">Log in</a>
+        <a href="registro.html" class="get-started-btn scrollto">Register</a>
+        {% endif %}
+      </div>
+    </header>
+    <!-- End Header -->
+
+    {% block content %}
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row">
+          <div class="col-xl-6">
+            <h1>DECANA DE AMÉRICA</h1>
+            <h2>
+              "San Marcos es una institución antigua, como decía Arguedas, la antigüedad es un valor, y pues uno de los valores peruanos es esta
+              universidad, la más antigua de América..."
+            </h2>
+            <a href="about.html" class="btn-get-started scrollto">Conoce su Historia</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="row no-gutters">
+            <div class="content col-xl-5 d-flex align-items-stretch">
+              <div class="content">
+                <h3>LOGROS ACADÉMICOS</h3>
+                <p>Click in the button below to see our last post.</p>
+                <a href="#" class="about-btn"><span>Click here</span> <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-stretch">
+              <div class="icon-boxes d-flex flex-column justify-content-center">
+                <div class="row">
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <i><img src="{% static 'assets/img/logros/investigadores.svg' %}" alt="" /></i>
+                    <h4>2,212 Docentes investigadores</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis impedit harum porro tenetur mollitia voluptate voluptatum
+                      iste repellendus voluptates doloribus assumenda iure dignissimos at tempora dolorum, quasi dolore quibusdam a!
+                    </p>
+                  </div>
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <i><img src="{% static 'assets/img/logros/ranking.svg' %}" alt="" /></i>
+                    <h4>1° PUESTO a nivel nacional, según Webometrics</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum animi impedit aliquid minus! Esse molestiae atque laudantium
+                      labore voluptas. Recusandae quod saepe nemo molestias fugit? Neque doloremque nisi dolores iste?
+                    </p>
+                  </div>
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <i><img src="{% static 'assets/img/logros/puesto.svg' %}" alt="" /></i>
+                    <h4>1° PUESTO en producción científica nacional</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nulla voluptas eaque laudantium neque cumque cum, error
+                      sapiente corrupti fugiat quisquam perferendis quas officia molestias soluta maiores sequi? Suscipit, similique!
+                    </p>
+                  </div>
+                  <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <i><img src="{% static 'assets/img/logros/carreras.svg' %}" alt="" /></i>
+                    <h4>66 CARRERAS de pregrado, en cinco áreas del conocimiento</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maxime voluptates nam ad perferendis sit dolorem, provident
+                      enim itaque dignissimos deserunt deleniti sint vitae ab cumque alias soluta. Dicta, iusto?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- End .content-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>FACULTADES</h2>
+            <p>Facultades de la Universidad Nacional Mayor de San Marcos</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img src="{% static 'assets/img/carreras/ciencias-de-la-salud.png' %}" class="img-fluid" alt="" />
+                  <div class="social">
+                    <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>CIENCIAS DE LA SALUD</h4>
+                  <span>
+                    <ul>
+                      <li>Medicina</li>
+                      <li>Medicina Veterinaria</li>
+                      <li>Psicologia</li>
+                      <li>Odontologia</li>
+                      <li>Farmacia y Bioquímica</li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="400">
+                <div class="member-img">
+                  <img src="{% static 'assets/img/carreras/ingenierias.png' %}" class="img-fluid" alt="" />
+                  <div class="social">
+                    <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>INGENIERÍAS</h4>
+                  <span>
+                    <ul>
+                      <li>Ingeniería Geológica, Minera, Metalúrgica y Geográfica</li>
+                      <li>Ingeniería Industrial</li>
+                      <li>Ingeniería de Sistemas e Informática</li>
+                      <li>Ingeniería Electrónica y Eléctrica</li>
+                      <li>Química e Ingeniería Química</li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                  <img src="{% static 'assets/img/carreras/ciencias-economicas.png' %}" class="img-fluid" alt="" />
+                  <div class="social">
+                    <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>CIENCIAS ECONÓMICAS</h4>
+                  <span>
+                    <ul>
+                      <li>Ciencias Administrativas</li>
+                      <li>Ciencias Contables</li>
+                      <li>Ciencias Económicas</li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                  <img src="{% static 'assets/img/carreras/letras-humanidades.png' %}" class="img-fluid" alt="" />
+                  <div class="social">
+                    <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>CIENCIAS JURÍDICAS</h4>
+                  <span>
+                    <ul>
+                      <li>Ciencias Sociales</li>
+                      <li>Derecho y Ciencia Política</li>
+                      <li>Letras y Ciencias Humanas</li>
+                      <li>Educación</li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+
+      <!-- ======= Contact Section ======= -->
+    </main>
+    <!-- End #main -->
+    {% endblock %}
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row"></div>
+        </div>
+      </div>
+
+      <div class="container d-md-flex py-4">
+        <div class="me-md-auto text-center text-md-start">
+          <div class="copyright">
+            &copy; Copyright <strong><span>FISI UNMSM</span></strong
+            >. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">Luis B. - Juan C.</a>
+          </div>
+        </div>
+        <div class="social-links text-center text-md-end pt-3 pt-md-0">
+          <a href="https://twitter.com/" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>

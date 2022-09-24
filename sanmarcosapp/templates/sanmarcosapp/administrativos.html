@@ -1,0 +1,59 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<div
+  class="jumbotron bg-cover"
+  style="
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%),
+      url('../static/assets/img/bannerhome.webp');
+  ">
+  <div class="container">
+    <a href="alta_administrativos.html" class="btn btn-primary mt-5">Crear Nuevo</a>
+    <a class="btn btn-secondary mt-5" href="/index.html">Regresar Menú Principal</a>
+
+    <table class="table table-bordered mt-5 border-secondary text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Cargo</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for administrativo in administrativos %}
+        <tr>
+          <th>{{ administrativo.id }}</th>
+          <td>{{ administrativo.nombre }}</td>
+          <td>{{ administrativo.cargo }}</td>
+          <td>
+            {% if user.is_authenticated %}
+            <a href="detalles_administrativos_{{ administrativo.id }}" class="btn btn-danger">Ver mas</a>
+            <a href="editar_administrativo/{{administrativo.id}}" class="btn btn-success">Editar</a>
+            <a href="eliminar_administrativo_{{ administrativo.id }}" class="btn btn-primary">Eliminar</a>
+            {% else %}
+            <a class="btn btn-danger">Ver mas</a>
+            <a class="btn btn-success">Editar</a>
+            <a class="btn btn-primary">Eliminar</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- <div class="container">
+ 
+</div> -->
+
+<br />
+<br />
+<br />
+<br />
+<br />
+{% endblock %}

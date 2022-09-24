@@ -1,0 +1,38 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<form align="center" action="alta_directorio" method="POST">
+  {% csrf_token %}
+  <p>Ingresar un directorio:</p>
+  <br />
+  <p>Nombre de la Facultad:</p>
+  <input type="text" name="nombre" />
+  <br />
+  <br />
+  <p>Medio de Contacto:</p>
+  <input type="text" name="contacto" />
+
+  <br />
+  <br />
+  <input type="submit" value="Enviar" />
+</form>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}
