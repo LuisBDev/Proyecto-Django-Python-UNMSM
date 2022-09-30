@@ -1,0 +1,35 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<div align="center">
+  {% if directorios %} {% for directorio in directorios %}
+
+  <p>Nombre : {{ directorio.nombre }}</p>
+  <p>Contacto : {{ directorio.contacto }}</p>
+
+  {% endfor %} {% else %}
+
+  <p>No se encontraron resultados</p>
+
+  {% endif %}
+
+  <a class="btn btn-outline-secondary" href="/directorios.html">Regresar Atras</a>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}

@@ -7,8 +7,60 @@ from sanmarcosapp.models import Administrativos, Facultades, Directorios
 from sanmarcosapp.forms import FacultadForm, AdministrativoForm, DirectorioForm, UserEditForm
 from django.shortcuts import render, get_object_or_404, redirect
 from . models import Administrativos
+from django.db.models import Q
 
 # Create your views here.
+
+# Create view for finding a faculty
+
+
+# def buscar_facultad(request):
+#     if request.method == 'GET':
+#         nombre = request.GET.get('nombre')
+#     if nombre:
+#         facultades = Facultades.objects.filter(nombre__icontains=nombre)
+#         return render(request, 'sanmarcosapp/facultades.html', {'facultades': facultades})
+#     else:
+#         print('Nada para mostrar')
+#         return request(request, 'sanmarcosapp/facultades.html', {})
+
+
+def buscar_administrativo(request):
+    if request.GET["nom"]:
+        administrativo = request.GET["nom"]
+        administrativos = Administrativos.objects.filter(
+            nombre__icontains=administrativo)
+
+        return render(request, "sanmarcosapp/buscar_administrativos.html", {"administrativos": administrativos, "query": administrativo})
+    else:
+        mensaje = "No se encontraron resultados"
+
+    return HttpResponse(mensaje)
+
+
+def buscar_facultad(request):
+    if request.GET["nom"]:
+        facultad = request.GET["nom"]
+        facultades = Facultades.objects.filter(nombre__icontains=facultad)
+
+        return render(request, "sanmarcosapp/buscar_facultades.html", {"facultades": facultades, "query": facultad})
+    else:
+        mensaje = "No se encontraron resultados"
+
+    return HttpResponse(mensaje)
+
+
+def buscar_directorio(request):
+    if request.GET["nom"]:
+        directorio = request.GET["nom"]
+        directorios = Directorios.objects.filter(
+            nombre__icontains=directorio)
+
+        return render(request, "sanmarcosapp/buscar_directorios.html", {"directorios": directorios, "query": directorio})
+    else:
+        mensaje = "No se encontraron resultados"
+
+    return HttpResponse(mensaje)
 
 
 def index(request):
@@ -92,18 +144,6 @@ def register(request):
 def logout(request):
     logout(request)
     return redirect('sanmarcosapp/logout.html')
-
-
-def buscar_administrativo(request):
-    if request.method == 'GET':
-        nombre = request.GET.get('nombre')
-    if nombre:
-        administrativos = Administrativos.objects.filter(
-            nombre__icontains=nombre)
-        return render(request, 'sanmarcosapp/administrativos.html', {'administrativos': administrativos})
-    else:
-        print('Nada para mostrar')
-        return request(request, 'sanmarcosapp/administrativos.html', {})
 
 
 @login_required
@@ -198,6 +238,11 @@ def detalles_facultades(request, id):
     facultades = Facultades.objects.filter(id=id)
 
     return render(request, "sanmarcosapp/detalles_facultades.html", {"facultades": facultades})
+
+
+def buscar_administrativos(request, nombre):
+    administrativos = Administrativos.objects.filter(nombre__icontains=nombre)
+    return render(request, "sanmarcosapp/buscar_administrativos.html", {"administrativos": administrativos})
 
 
 def detalles_directorios(request, id):

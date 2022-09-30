@@ -7,13 +7,34 @@
 
 <div
   class="jumbotron bg-cover"
-  style="
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%),
-      url('../static/assets/img/bannerhome.webp');
-  ">
+  style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.9) 100%), url('../static/assets/img/bannerhome.webp')">
   <div class="container">
     <a href="alta_administrativos.html" class="btn btn-primary mt-5">Crear Nuevo</a>
     <a class="btn btn-secondary mt-5" href="/index.html">Regresar Menú Principal</a>
+    <!-- 
+    <div>
+      <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="GET">
+        <div class="mt-5 input-group">
+          <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar..." name="buscar" value="{{ request.GET.buscar }}" />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="submit">
+              <br />
+              <i class="fas fa-search fa-sm"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div> -->
+
+    <form action="/buscar_administrativos/" method="GET">
+      <br />
+      <!-- <input type="text" name="nom" /> -->
+      <input type="text" name="nom" class="form-control" placeholder="Nombre a buscar" />
+      <!-- <input type="submit" value="Búsqueda por Nombre" /> -->
+      <br />
+
+      <input class="btn btn-primary" type="submit" value="Buscar!" />
+    </form>
 
     <table class="table table-bordered mt-5 border-secondary text-center">
       <thead class="table-dark">

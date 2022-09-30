@@ -31,6 +31,10 @@ urlpatterns = [
     path('logout.html', LogoutView.as_view(
         template_name='sanmarcosapp/logout.html'), name='Logout'),
 
+    # Buscadores
+    path('buscar_administrativos/', views.buscar_administrativo),
+    path('buscar_facultades/', views.buscar_facultad),
+    path('buscar_directorios/', views.buscar_directorio),
 
 
     path('administrativos.html', views.administrativos),

@@ -1,0 +1,35 @@
+{% extends 'sanmarcosapp/index.html' %} {% load static %} {% block content %}
+
+<br />
+<br />
+<br />
+<br />
+
+<div align="center">
+  {% if facultades %} {% for facultad in facultades %}
+
+  <p>Nombre : {{ facultad.nombre }}</p>
+  <p>Escuela : {{ facultad.escuelas }}</p>
+
+  {% endfor %} {% else %}
+
+  <p>No se encontraron resultados</p>
+
+  {% endif %}
+
+  <a class="btn btn-outline-secondary" href="/facultades.html">Regresar atras</a>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+{% endblock %}
