@@ -74,7 +74,7 @@ urlpatterns = [
          views.editar_facultades, name='editar_facultades'),
     path('editar_directorios_<int:id>',
          views.editar_directorios, name='editar_directorios'),
-    path('oficinas.html', views.oficinas),
+    path('noticias.html', views.noticias),
 ]
 
 

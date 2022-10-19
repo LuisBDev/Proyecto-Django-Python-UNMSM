@@ -15,17 +15,14 @@
     <br />
     <br />
     <br />
+
+    <h1 align="center">REGÍSTRATE</h1>
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <h1 align="center">Registrate</h1>
-    <br />
-    <form action="" method="POST" align="center">
-      {% csrf_token %} {{ form.as_p}}
-      <button type="submit">Registrarse</button>
+    <form action="" method="POST">
+      <div>
+        {% csrf_token %} {{ form.as_p}}
+        <button type="submit">Registrarse</button>
+      </div>
     </form>
     <br />
     <br />

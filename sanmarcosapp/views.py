@@ -322,5 +322,5 @@ def editar_facultades(request, id):
     return render(request, "sanmarcosapp/editar_facultades.html", {'miform': miform, 'facultad': facultad})
 
 
-def oficinas(request):
-    return render(request, "sanmarcosapp/oficinas.html")
+def noticias(request):
+    return render(request, "sanmarcosapp/noticias.html")
