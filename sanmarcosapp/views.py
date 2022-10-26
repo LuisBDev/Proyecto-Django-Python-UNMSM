@@ -260,7 +260,7 @@ def detalles_administrativos(request, id):
 
 
 @login_required
-def editarPerfil(request):
+def editarperfil(request):
 
     usuario = request.user
 
@@ -281,7 +281,7 @@ def editarPerfil(request):
     else:
         miFormulario = UserEditForm(initial={'email': usuario.email})
 
-    return render(request, "sanmarcosapp/editarPerfil.html", {"miFormulario": miFormulario, "usuario": usuario})
+    return render(request, "sanmarcosapp/editarperfil.html", {"miFormulario": miFormulario, "usuario": usuario})
 
 
 @login_required
