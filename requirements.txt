@@ -101,7 +101,6 @@ python-docx==0.8.11
 python-dotenv==0.20.0
 python-multipart==0.0.5
 PyWavelets==1.4.1
-pywin32==304
 pyzmq==23.1.0
 qt5-applications==5.15.2.2.2
 qt5-tools==5.15.2.1.2
