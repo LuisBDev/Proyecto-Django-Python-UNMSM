@@ -13,6 +13,8 @@ Entrega intermedia.
 - Actualizar
 - Ver más
 
-LAST UPDATE: SearchBar added.
+LAST UPDATE: Se añadió el achivo 'Unit Tests.xlsx' de las pruebas unitarias. 
+https://github.com/LuisBDev/python-django-UNMSM/blob/master/Unit%20Tests.xlsx
 
 VIDEO FUNCIONAMIENTO: https://youtu.be/CxO1MqLLpxg
+
